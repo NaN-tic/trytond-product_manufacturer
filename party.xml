@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="party_view_form">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_form"/>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+                    <xpath
+                        expr="/form/group[@id=&quot;checkboxes&quot;]"
+                        position="after">
+                        <label name="manufacturer"/>
+                        <field name="manufacturer" xexpand="0" width="25"/>
+                    </xpath>
+                </data>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_open_manufactuer">
+            <field name="name">Manufacturers</field>
+            <field name="res_model">party.party</field>
+            <field name="domain">[('manufacturer', '=', True)]</field>
+        </record>
+        <menuitem name="Manufacturers"
+            parent="party.menu_party_form"
+            action="act_open_manufactuer"
+            icon="tryton-list"
+            id="menu_manufacturer"/>
+
+    </data>
+</tryton>
