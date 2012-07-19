@@ -26,8 +26,7 @@ setup(name='trytond_product_manufacturer',
     author=info.get('author', 'Zikzakmedia'),
     author_email=info.get('email', 'zikzak@zikzakmedia.com'),
     url=info.get('website', 'http://www.zikzakmedia.com'),
-    download_url="http://downloads.tryton.org/" + \
-            info.get('version', '0.0.1').rsplit('.', 1)[0] + '/',
+    download_url="https://bitbucket.org/zikzakmedia/trytond-product_manufacturer",
     package_dir={'trytond.modules.product_manufacturer': '.'},
     packages=[
         'trytond.modules.product_manufacturer',
