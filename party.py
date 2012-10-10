@@ -5,16 +5,14 @@
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.tools import safe_eval, datetime_strftime
 from trytond.transaction import Transaction
-from trytond.pool import Pool
+from trytond.pool import Pool, PoolMeta
 
-class Party(ModelSQL, ModelView):
+__all__ = ['Party']
+__metaclass__ = PoolMeta
+
+class Party:
     """Party"""
-    _name = 'party.party'
-    _description = __doc__
+    __name__ = 'party.party'
 
     manufacturer = fields.Boolean('Manufacturer',
         help="Check this box if the partner is a manufacturer.")
-
-Party()
-
-

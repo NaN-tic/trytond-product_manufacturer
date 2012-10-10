@@ -5,33 +5,34 @@
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.tools import safe_eval, datetime_strftime
 from trytond.transaction import Transaction
-from trytond.pool import Pool
+from trytond.pool import Pool, PoolMeta
 
-class Move(ModelSQL, ModelView):
+__all__ = ['Move']
+__metaclass__ = PoolMeta
+
+class Move:
     "Stock Move"
-    _name = 'stock.move'
+    __name__ = 'stock.move'
 
     manufacturer = fields.Function(
         fields.Many2One('party.party', 'Manufacturer',
-            on_change=['product']),
-        'get_manufacturer')
+            on_change=['product']), 'get_manufacturer')
 
-    def get_manufacturer(self, ids, name):
+    @classmethod
+    def get_manufacturer(cls, records, name):
         result = {}
-        for line in self.browse(ids):
+        for line in records:
             result[line.id] = line.product.manufacturer.id
         return result
 
-    def on_change_product(self, values):
+    def on_change_product(self):
         """When change product, get manufacturer value"""
         product_obj = Pool().get('product.product')
-        res = super(Move, self).on_change_product(values)
-        product = values.get('product', False)
+        res = super(Move, self).on_change_product()
+        product = self.product or  False
         res['manufacturer'] = None
-        if values.get('product'):
-            product = product_obj.browse(values['product'])
+        if self.product:
+            product = self.product
             res['manufacturer'] = product.manufacturer and \
                     product.manufacturer.id or None
         return res
-
-Move()
