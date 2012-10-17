@@ -27,7 +27,6 @@ class Move:
 
     def on_change_product(self):
         """When change product, get manufacturer value"""
-        product_obj = Pool().get('product.product')
         res = super(Move, self).on_change_product()
         product = self.product or  False
         res['manufacturer'] = None

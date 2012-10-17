@@ -28,7 +28,6 @@ class SaleLine:
 
     def on_change_product(self):
         """When change product, get manufacturer value"""
-        product_obj = Pool().get('product.product')
         res = super(SaleLine, self).on_change_product()
         product = self.product or  False
         res['manufacturer'] = None
@@ -37,4 +36,3 @@ class SaleLine:
             res['manufacturer'] = product.manufacturer and \
                     product.manufacturer.id or None
         return res
-
