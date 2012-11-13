@@ -33,14 +33,14 @@ setup(name='trytonzz_product_manufacturer',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytonzz-product_manufacturer",
-    package_dir={'trytonzz.modules.product_manufacturer': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytond-product_manufacturer",
+    package_dir={'trytond.modules.product_manufacturer': '.'},
     packages=[
-        'trytonzz.modules.product_manufacturer',
-        'trytonzz.modules.product_manufacturer.tests',
+        'trytond.modules.product_manufacturer',
+        'trytond.modules.product_manufacturer.tests',
     ],
     package_data={
-        'trytonzz.modules.product_manufacturer': info.get('xml', []) \
+        'trytond.modules.product_manufacturer': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po'],
     },
     classifiers=[
@@ -63,9 +63,9 @@ setup(name='trytonzz_product_manufacturer',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytonzz.modules]
-    product_manufacturer = trytonzz.modules.product_manufacturer
+    [trytond.modules]
+    product_manufacturer = trytond.modules.product_manufacturer
     """,
     test_suite='tests',
-    test_loader='trytonzz.test_loader:Loader',
+    test_loader='trytond.test_loader:Loader',
 )
