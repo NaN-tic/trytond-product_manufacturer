@@ -13,8 +13,8 @@ Este módulo:
 
 .. figure:: images/tryton-manufacturer.png
 
-Módulos que dependen
-====================
+Módulos de los que depende
+==========================
 
 Instalados
 ----------
