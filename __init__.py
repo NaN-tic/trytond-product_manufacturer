@@ -14,8 +14,8 @@ def register():
     Pool.register(
         Move,
         Party,
-        ProductTemplate,
-        ProductProduct,
+        Template,
+        Product,
         PurchaseLine,
         SaleLine,
         module='product_manufacturer', type_='model')
