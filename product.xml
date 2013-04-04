@@ -13,16 +13,29 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
                     <xpath
                         expr="/form/notebook"
                         position="inside">
-                        <page string="Manufacturer" col="3" id="manufacturer">
+                        <page string="Manufacturer" col="4" id="manufacturer">
                             <label name="manufacturer"/>
                             <field name="manufacturer"/>
-                            <newline/>
                             <label name="manufacturer_name"/>
                             <field name="manufacturer_name"/>
-                            <newline/>
-                            <label name="manufacturer_code"/>
-                            <field name="manufacturer_code"/>
                         </page>
+                    </xpath>
+                </data>
+                ]]>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_view_form">
+            <field name="model">product.product</field>
+            <field name="inherit" ref="product.product_view_form"/>
+            <field name="arch" type="xml">
+                <![CDATA[
+                <data>
+                    <xpath
+                        expr="/form/field[@name='code']"
+                        position="after">
+                        <label name="manufacturer_code"/>
+                        <field name="manufacturer_code"/>
                     </xpath>
                 </data>
                 ]]>

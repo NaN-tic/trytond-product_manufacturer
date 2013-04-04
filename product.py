@@ -15,11 +15,11 @@ class Template:
 
     manufacturer = fields.Many2One('party.party', 'Manufacturer',
         domain=[('manufacturer', '=', True)])
+    manufacturer_name =  fields.Char('Manufacturer Name')
 
 
 class Product:
     'Product'
     __name__ = 'product.product'
 
-    manufacturer_name =  fields.Char('Manufacturer Name')
     manufacturer_code =  fields.Char('Manufacturer Code')
