@@ -12,16 +12,3 @@ Este módulo:
   *Fabricante* en las lineas como título informativo del producto.
 
 .. figure:: images/tryton-manufacturer.png
-
-Dependencias
-------------
-
-* Compras_
-* Producto_
-* Stock_
-* Ventas_
-
-.. _Compras: ../purchase/index.html
-.. _Producto: ../product/index.html
-.. _Stock: ../sale/index.html
-.. _Ventas: ../stock/index.html
