@@ -13,20 +13,6 @@ Este módulo:
 
 .. figure:: images/tryton-manufacturer.png
 
-Módulos de los que depende
-==========================
-
-Instalados
-----------
-
-.. toctree::
-   :maxdepth: 1
-
-   /purchase/index
-   /product/index
-   /sale/index
-   /stock/index
-
 Dependencias
 ------------
 
