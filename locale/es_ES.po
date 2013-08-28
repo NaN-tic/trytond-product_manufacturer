@@ -18,6 +18,14 @@ msgctxt "field:product.template,manufacturer:"
 msgid "Manufacturer"
 msgstr "Fabricante"
 
+msgctxt "field:product.template,manufacturer_name:"
+msgid "Manufacturer Name"
+msgstr "Nombre del fabricante"
+
+msgctxt "field:purchase.line,manufacturer:"
+msgid "Manufacturer"
+msgstr "Fabricante"
+
 msgctxt "field:sale.line,manufacturer:"
 msgid "Manufacturer"
 msgstr "Fabricante"
