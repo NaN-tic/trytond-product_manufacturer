@@ -1,0 +1,47 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:party.party,manufacturer:"
+msgid "Manufacturer"
+msgstr "Fabricant"
+
+msgctxt "field:product.product,manufacturer_code:"
+msgid "Manufacturer Code"
+msgstr "Code fabricant"
+
+msgctxt "field:product.template,manufacturer:"
+msgid "Manufacturer"
+msgstr "Fabricant"
+
+msgctxt "field:product.template,manufacturer_name:"
+msgid "Manufacturer Name"
+msgstr "Nom du fabricant"
+
+msgctxt "field:purchase.line,manufacturer:"
+msgid "Manufacturer"
+msgstr "Fabricant"
+
+msgctxt "field:sale.line,manufacturer:"
+msgid "Manufacturer"
+msgstr "Fabricant"
+
+msgctxt "field:stock.move,manufacturer:"
+msgid "Manufacturer"
+msgstr "Fabricant"
+
+msgctxt "help:party.party,manufacturer:"
+msgid "Check this box if the partner is a manufacturer."
+msgstr "Cocher cette case si le tiers est un fabricant"
+
+msgctxt "model:ir.action,name:act_open_manufactuer"
+msgid "Manufacturers"
+msgstr "Fabricants"
+
+msgctxt "model:ir.ui.menu,name:menu_manufacturer"
+msgid "Manufacturers"
+msgstr "Fabricants"
+
+msgctxt "view:product.template:"
+msgid "Manufacturer"
+msgstr "Fabricant"
