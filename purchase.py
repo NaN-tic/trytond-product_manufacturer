@@ -19,8 +19,9 @@ class PurchaseLine:
     def get_manufacturer(cls, records, name):
         result = {}
         for line in records:
-            result[line.id] = line.product.manufacturer and \
-                line.product.manufacturer.id or None
+            result[line.id] = (line.product.manufacturer.id
+                if line.product and line.product.manufacturer
+                else None)
         return result
 
     def on_change_product(self):
