@@ -1,40 +1,18 @@
 <?xml version="1.0"?>
-<!-- This file is part product_manufacturer module for Tryton.
-The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<!-- This file is part of the product_manufacturer module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
 <tryton>
     <data>
-
         <record model="ir.ui.view" id="move_view_form">
             <field name="model">stock.move</field>
             <field name="inherit" ref="stock.move_view_form"/>
-            <field name="arch" type="xml">
-                <![CDATA[
-                <data>
-                    <xpath
-                        expr="/form/field[@name=&quot;product&quot;]"
-                        position="after">
-                        <label name="manufacturer"/>
-                        <field name="manufacturer"/>
-                    </xpath>
-                </data>
-                ]]>
-            </field>
+            <field name="name">move_form</field>
         </record>
-
         <record model="ir.ui.view" id="move_view_tree">
             <field name="model">stock.move</field>
             <field name="inherit" ref="stock.move_view_tree"/>
-            <field name="arch" type="xml">
-                <![CDATA[
-                <data>
-                    <xpath expr="/tree/field[@name=&quot;product&quot;]" 
-                        position="after">
-                        <field name="manufacturer"/>
-                    </xpath>
-                </data>
-                ]]>
-            </field>
+            <field name="name">move_tree</field>
         </record>
-
     </data>
 </tryton>
