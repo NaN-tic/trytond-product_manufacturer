@@ -11,8 +11,7 @@ __metaclass__ = PoolMeta
 class Move:
     __name__ = 'stock.move'
     manufacturer = fields.Function(
-        fields.Many2One('party.party', 'Manufacturer',
-            on_change=['product']), 'get_manufacturer')
+        fields.Many2One('party.party', 'Manufacturer'), 'get_manufacturer')
 
     @classmethod
     def get_manufacturer(cls, records, name):

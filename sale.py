@@ -11,8 +11,7 @@ __metaclass__ = PoolMeta
 class SaleLine:
     __name__ = 'sale.line'
     manufacturer = fields.Function(
-        fields.Many2One('party.party', 'Manufacturer',
-            on_change=['product']),
+        fields.Many2One('party.party', 'Manufacturer'),
         'get_manufacturer')
 
     @classmethod
