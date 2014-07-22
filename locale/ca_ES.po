@@ -10,10 +10,6 @@ msgctxt "field:product.product,manufacturer_code:"
 msgid "Manufacturer Code"
 msgstr "Codi del fabricant"
 
-msgctxt "field:product.product,manufacturer_name:"
-msgid "Manufacturer Name"
-msgstr "Nom del fabricant"
-
 msgctxt "field:product.template,manufacturer:"
 msgid "Manufacturer"
 msgstr "Fabricant"
@@ -37,14 +33,6 @@ msgstr "Fabricant"
 msgctxt "help:party.party,manufacturer:"
 msgid "Check this box if the partner is a manufacturer."
 msgstr "Marqui aquesta opció si es un fabricant"
-
-msgctxt "model:ir.action,name:act_open_manufactuer"
-msgid "Manufacturers"
-msgstr "Fabricants"
-
-msgctxt "model:ir.ui.menu,name:menu_manufacturer"
-msgid "Manufacturers"
-msgstr "Fabricants"
 
 msgctxt "view:product.template:"
 msgid "Manufacturer"
