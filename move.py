@@ -21,13 +21,9 @@ class Move:
                 line.product.manufacturer.id or None
         return result
 
+    @fields.depends('on_change_product')
     def on_change_product(self):
-        """When change product, get manufacturer value"""
-        res = super(Move, self).on_change_product()
-        product = self.product or  False
-        res['manufacturer'] = None
+        super(Move, self).on_change_product()
+        self.manufacturer = None
         if self.product:
-            product = self.product
-            res['manufacturer'] = product.manufacturer and \
-                    product.manufacturer.id or None
-        return res
+            self.manufacturer = self.product.manufacturer or None
