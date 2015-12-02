@@ -2,6 +2,6 @@
 #The COPYRIGHT file at the top level of this repository contains 
 #the full copyright notices and license terms.
 
-from .test_manufacturer import suite
+from .test_product_manufacturer import suite
 
 __all__ = ['suite']
