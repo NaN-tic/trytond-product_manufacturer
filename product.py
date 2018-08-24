@@ -7,15 +7,13 @@ from trytond.pool import PoolMeta
 __all__ = ['Template', 'Product']
 
 
-class Template:
-    __metaclass__ = PoolMeta
+class Template(metaclass=PoolMeta):
     __name__ = 'product.template'
     manufacturer = fields.Many2One('party.party', 'Manufacturer',
         domain=[('manufacturer', '=', True)])
     manufacturer_name = fields.Char('Manufacturer Name')
 
 
-class Product:
-    __metaclass__ = PoolMeta
+class Product(metaclass=PoolMeta):
     __name__ = 'product.product'
     manufacturer_code = fields.Char('Manufacturer Code')

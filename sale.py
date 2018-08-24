@@ -7,8 +7,7 @@ from trytond.pool import PoolMeta
 __all__ = ['SaleLine']
 
 
-class SaleLine:
-    __metaclass__ = PoolMeta
+class SaleLine(metaclass=PoolMeta):
     __name__ = 'sale.line'
     manufacturer = fields.Function(
         fields.Many2One('party.party', 'Manufacturer'),
