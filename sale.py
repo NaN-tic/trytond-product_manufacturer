@@ -3,6 +3,8 @@
 # copyright notices and license terms.
 from trytond.model import fields
 from trytond.pool import PoolMeta
+from trytond.pyson import Eval
+
 
 __all__ = ['SaleLine']
 
@@ -10,7 +12,9 @@ __all__ = ['SaleLine']
 class SaleLine(metaclass=PoolMeta):
     __name__ = 'sale.line'
     manufacturer = fields.Function(
-        fields.Many2One('party.party', 'Manufacturer'),
+        fields.Many2One('party.party', 'Manufacturer', context={
+            'company': Eval('company'),
+        }, depends=['company']),
         'get_manufacturer')
 
     @classmethod
